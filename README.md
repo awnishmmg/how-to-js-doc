@@ -34,9 +34,12 @@ Add the JQuery Code
 
 ### Add & Remove Functionality using Table is the easiest way
 ```
-<table class="table table-striped table-bordered">
+			<div class="row mt-2">
+			    <div class="col-md-2"><b>Add Parameter <span style="color:red;font-weight: bold;"><span style="color:red;font-weight: bold;">*</span></span></b></div>
+			    <div class="col-md-10" style="overflow-y: auto;max-height: 300px;">
+			       	<table class="table table-striped table-bordered">
 			       		
-			       			<thead style="background-color: black;color:white;">
+			       			<thead style="background-color: black;color:white;position: sticky;top:0;">
 			       				<tr>
 				       				<th>Serial No.</th>
 				       				<th>Parameter</th>
@@ -54,6 +57,8 @@ Add the JQuery Code
 			       			
 
 			       	</table>
+			        </div>
+			</div>
 ```
 
 **Adding JQuery Code**
