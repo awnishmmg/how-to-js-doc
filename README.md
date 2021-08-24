@@ -84,3 +84,20 @@ Add the JQuery Code
 	}
 
 ```
+
+### Javascript code to convert Any Normal Text Data to Invoice with #prefixed code
+
+```
+//convert to Invoice with prefix #
+function converttoInvoice(element){
+  that = element;
+  if(that.value == ""){
+    return true;
+  }else{
+    var Oldvalue = that.value;
+    if(Oldvalue[0]!="#"){ that.value = "#"+Oldvalue; }
+    else{ that.value = Oldvalue; }
+  }
+  
+}
+```
