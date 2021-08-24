@@ -101,3 +101,22 @@ function converttoInvoice(element){
   
 }
 ```
+### Function to Dynamically Change Class in Upward and Downward
+
+```
+
+function ChangeArrow(element){
+
+  if($(element).find("i").hasClass("fa-arrow-down")){
+      
+      $(element).find("i").removeClass("fa-arrow-down");
+      $(element).find("i").addClass("fa-arrow-up");
+  }else{
+
+      $(element).find("i").removeClass("fa-arrow-up");
+      $(element).find("i").addClass("fa-arrow-down");
+  } 
+
+}
+
+```
