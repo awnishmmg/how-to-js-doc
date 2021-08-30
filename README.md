@@ -1,6 +1,69 @@
 # how-to-js-doc
 This is JavaScript Documentation.
 
+# How to Make Preview Modal using Iframe to open, pdf, Images, vedios,
+
+Add The Modal Form 
+```
+
+<div class="modal fade" id="previewDailogModal" tabindex="-1" role="dialog" aria-labelledby="previewDailogLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="width: 100%;height: 100%;">
+      <form action="" method="POST" id="previewDailog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+            <h4 class="modal-title" id="previewDailogLabel"><b>Preview Invoice <span id="modal-invoice-no"></span></b></h4> </div>
+          <div class="modal-body">
+              <iframe src="" id="pdf-reader" frameborder="0" height="600" scrolling="no"width="100%"></iframe>          
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">No,Go Back</button>
+            <!-- <button type="submit" class="btn btn-danger">Yes Delete</button> -->
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+```
+Close Modal using Esc
+```
+
+$(document).keydown(function(event) { 
+  if (event.keyCode == 27) { 
+    $('##modal-invoice-no').modal("hide");
+  }
+});
+
+```
+Adding JQuery Trigger Event for Onclick
+```
+
+function previewDailog(url,element){
+
+$("#pdf-reader").attr("src",url);
+$("#previewDailogModal").modal("show");
+
+$("#modal-invoice-no").html($(element).text());
+
+}
+
+
+```
+Adding data in element
+```
+<td>
+          <?php $total_path = base_url('assets/uploads/purchase_invoice/'); ?>
+
+          <button onclick="previewDailog('<?php echo $total_path.$row['invoice']; ?>',this);" style="cursor: pointer;">
+            <?php echo $row['invoice_no'];?>
+          </button>
+
+        </td>
+```
+
+
+
 ### How to create Your Text Editor
 ```
 <div class="col-md-6"><div name="message" class="editable" readonly><span style="font-weight: bold;"> Hi ! Administrator,</span>
