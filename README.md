@@ -3,8 +3,13 @@ This is JavaScript Documentation.
 
 ### How to Add Morris.js Donuts Charts using formatter 
 
-***In case of donut charts data has to binded in format of {labels:"",value:""}***
+***In case of donut charts data has to binded in format of {labels:"",value:""} ***
+***To Empty the charts ***
 
+```
+$('#sms-analysis').empty();
+
+```
 ```
 $return_array['application_data'] = $sms_count_data;
 
