@@ -1,6 +1,44 @@
 # how-to-js-doc
 This is JavaScript Documentation.
 
+### How to Add Morris.js Donuts Charts using formatter 
+```
+
+var sum=0;
+function PurchaseAnalysis(id='',data=[]){
+
+if(data.length){
+
+  for(var i=0;i<data.length;i++){
+     sum =  parseInt(sum)+parseInt(data[i].value);
+  }
+
+//console.log(sum);
+Morris.Donut({
+  element: id,
+  data:data,
+  dataLabels:true,
+  colors:['green','yellow','red'],
+  resize:true,
+  formatter:function(y,data){
+    var count = y
+    var percentage = (parseInt(count)/sum)*100
+    if(isNaN(NaN)){percentage = 0};
+    response_text = numberWithCommas(y)+"\n "+percentage.toFixed(2)+"%";
+    return response_text;
+  },
+
+});
+
+}else{
+  $('#'+id).append('<label class="no-data-label">Sorry No Data Found!</label>');
+     }
+}
+
+
+```
+
+
 ### Make a function in javascript to convert numberswithcommas in thousands.
 
 ```
