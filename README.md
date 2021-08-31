@@ -2,8 +2,35 @@
 This is JavaScript Documentation.
 
 ### How to Add Morris.js Donuts Charts using formatter 
+
+*** In case of donut charts data has to binded in format of {labels:"",value:""} ***
+```
+$return_array['application_data'] = $sms_count_data;
+
+		$pieChartsData = [];
+		foreach ($sms_count_data as $row) {
+
+			$data_m[] = [
+				'Delivered' => $row['delivered'],//85
+				'Unprocessed' => $row['send']-$row['processed'],//10
+				// 'Failed' => (($row['delivered']/$row['processed'])*100),
+				'Failed' => ($row['processed']-$row['delivered']),//5
+			];
+		}
+
+		foreach ($data_m as $index => $data_xy) {
+			foreach ($data_xy as $label => $value) {
+						$pieChartsData[] = [
+						'label' => ucfirst($label),
+						'value' => $value,
+					];
+			}
+		}
+
 ```
 
+
+```
 var sum=0;
 function PurchaseAnalysis(id='',data=[]){
 
