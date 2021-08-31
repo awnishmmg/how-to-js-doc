@@ -1,6 +1,19 @@
 # how-to-js-doc
 This is JavaScript Documentation.
 
+### Make a function in javascript to convert numberswithcommas in thousands.
+
+```
+function numberWithCommas(x) {
+    x = x.toString();
+    var pattern = /(-?\d+)(\d{3})/;
+    while (pattern.test(x))
+        x = x.replace(pattern, "$1,$2");
+    return x;
+}
+
+```
+
 # How to Make Preview Modal using Iframe to open, pdf, Images, vedios,
 
 Add The Modal Form 
