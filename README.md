@@ -3,7 +3,8 @@ This is JavaScript Documentation.
 
 ### How to Add Morris.js Donuts Charts using formatter 
 
-*** In case of donut charts data has to binded in format of {labels:"",value:""} ***
+***In case of donut charts data has to binded in format of {labels:"",value:""}***
+
 ```
 $return_array['application_data'] = $sms_count_data;
 
