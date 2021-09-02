@@ -282,3 +282,23 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 
    $("#vendorwisecharts-id").find("option[value='"+id+"']").attr("selected",true);
 ```
+
+### How to ScrollTo to Input:element where it is error
+
+```
+function handleSubmitbtn(element) {
+  if(checkFormValid()) {
+    if(is_exceeded) {
+      $("#ExceededModal").modal("show");
+      return false;
+    }
+    $("#form_follow").trigger("submit");
+  }else{
+    //Scroll to Error
+     $('html, body').animate({
+         scrollTop: ($('.error').offset().top - 300)
+    }, 500);
+    //Scroll to Error
+  }
+}
+```
