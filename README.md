@@ -274,3 +274,11 @@ function ChangeArrow(element){
 //Disable Right Click of the Menu
 document.addEventListener('contextmenu', event => event.preventDefault());
 ```
+### How to select only once and check mark others as unselected in options tag.
+```
+   $("#vendorwisecharts-id option:selected").each(function(){
+      $("#vendorwisecharts-id").find("option[value='"+id+"']").attr("selected",false);
+   });
+
+   $("#vendorwisecharts-id").find("option[value='"+id+"']").attr("selected",true);
+```
