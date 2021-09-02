@@ -267,3 +267,10 @@ function ChangeArrow(element){
 }
 
 ```
+
+### How to Disable Right Click 
+
+```
+//Disable Right Click of the Menu
+document.addEventListener('contextmenu', event => event.preventDefault());
+```
