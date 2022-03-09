@@ -302,3 +302,51 @@ function handleSubmitbtn(element) {
   }
 }
 ```
+### How to Perform the Javascript Array Operation 
+```
+var arr=[3,1,5,2,7];
+// var arr=[3,1,5,8,2,7]; 
+
+var key = -1;
+var i=0;
+while(true){ //Order = n
+  if(arr[i]>key){
+    //  console.log(arr[i]);
+     key=arr[i];
+  }
+  if(i==arr.length){
+    //  console.log(key);
+     break;
+  }
+  i++;
+}
+
+// console.log(arr);
+
+//Remove the Element from the array
+var tmp=[]; // Order = n
+for(var i=0;i<arr.length;i++){
+    if(arr[i]!==key){
+        tmp.push(arr[i]);
+    }
+}
+
+// console.log(tmp);
+
+// Finding the Second Largest
+
+var key = -1;
+var i=0;
+while(true){ //Order = n
+  if(tmp[i]>key){
+    //  console.log(tmp[i]);
+     key=tmp[i];
+  }
+  if(i==tmp.length){
+    //  console.log(key);
+     break;
+  }
+  i++;
+}
+console.log(key); //3n If no predefined function is used. Order(n)
+```
